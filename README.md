@@ -142,3 +142,10 @@ A simple rectangular beam segmented into 20 seperate volumes along the x-axis.
   <img src="images/single-segmented-beam.png" alt="Segmented Beam" width="600">
 </div>
 
+# cube-mesh-no-geom.exo/h5m/cub5
+
+A simple cube geometry that holds no metadata, only a tet mesh.
+
+<div align="center">
+  <img src="images/cube-no-geom.png" alt="Cube mesh without geometry or metadata" width="600">
+</div>
