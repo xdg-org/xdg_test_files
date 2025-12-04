@@ -1,5 +1,20 @@
 # Manifest
 
+## single-tet.h5m/exo
+
+A mesh containing a single tetrahedron. In the case of the `.h5m` file, the tet
+composes a single volume and each triangle of the tet is it's own surface.
+
+| Element Type      | Count |
+|-------------------|-------|
+| Surface Triangles | 4     |
+| Tetrahedrons      | 1     |
+
+<div align="center">
+  <img src="images/single-tet.png" alt="Single Tetrahedron" width="600">
+</div>
+
+
 ## jezebel.h5m
 
 A simple sphere geometry matching the size of the Jezebel bare sphere core (more info [here](https://www.osti.gov/servlets/purl/1344338)). This file contains a surface mesh only.
