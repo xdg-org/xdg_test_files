@@ -14,6 +14,16 @@ composes a single volume and each triangle of the tet is it's own surface.
   <img src="images/single-tet.png" alt="Single Tetrahedron" width="600">
 </div>
 
+The same mesh as above but uniformly refined one time to form a small tet mesh consisting of 8 tetrahedra with the same external nodes mesh containing a single tetrahedron. 
+
+| Element Type      | Count |
+|-------------------|-------|
+| Surface Triangles | 16     |
+| Tetrahedrons      | 8     |
+
+<div align="center">
+  <img src="images/small-tet-mesh.png" alt="Small Tetrahedra Mesh" width="600">
+</div>
 
 ## jezebel.h5m
 
