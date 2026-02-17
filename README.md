@@ -14,7 +14,7 @@ composes a single volume and each triangle of the tet is it's own surface.
   <img src="images/single-tet.png" alt="Single Tetrahedron" width="600">
 </div>
 
-The same mesh as above but uniformly refined one time to form a small tet mesh consisting of 8 tetrahedra with the same external nodes mesh containing a single tetrahedron. 
+The same mesh as above but uniformly refined one time to form a small tet mesh consisting of 8 tetrahedra with the same external nodes mesh containing a single tetrahedron.
 
 | Element Type      | Count |
 |-------------------|-------|
@@ -173,4 +173,22 @@ A simple cube geometry that holds no metadata, only a tet mesh.
 
 <div align="center">
   <img src="images/cube-no-geom.png" alt="Cube mesh without geometry or metadata" width="600">
+</div>
+
+## quad_sphere.h5m
+
+A simple sphere surface mesh composed of quadrilateral elements. This model
+matches the dimensions of the jezebel files above.
+
+| Element Type   | Count |
+|----------------|-------|
+| Surface Quads  | 9600  |
+| 1D Sides       | 38400 |
+| Vertices       | 9602  |
+
+`mbgsets -g quad_sphere.h5m` reports a single parent/child relationship:
+`Volume 1 -> Surface 1`.
+
+<div align="center">
+  <img src="images/quad-sphere.png" alt="Quad sphere surface mesh" width="463">
 </div>
