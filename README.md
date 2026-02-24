@@ -207,3 +207,15 @@ specifically. Cubit, MOAB, and Exodus file are provided.
   <img src="images/cube-w-multiblock-sideset-geom.png" alt="Cube with multiblock sideset. Sideset is highlighted" width="463">
 </div>
 
+## cyl-brick-quads.h5m/exo
+
+A 10 x 10 x 10 brick centered on (0, 0, 14.5) and a cylinder of radius 5 height 15 centered on the origin w/ rotation axis along Z. (hex mesh)
+
+| Element Type   | Count  |
+|----------------|--------|
+| Surface Quads  | 30478  |
+| Hexahedra      | 187200 |
+
+<div align="center">
+  <img src="images/cyl-brick-quads.png" alt="Multi-volume model using hexes/quads" width="463">
+</div>
