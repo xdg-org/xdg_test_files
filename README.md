@@ -192,3 +192,21 @@ matches the dimensions of the jezebel files above.
 <div align="center">
   <img src="images/quad-sphere.png" alt="Quad sphere surface mesh" width="463">
 </div>
+
+
+## Cube with Multiblock Sideset (cube-w-multiblock-sideset.*)
+
+This test case is added to address https://github.com/xdg-org/xdg/issues/212
+specifically. Cubit, MOAB, and Exodus file are provided.
+
+| Element Type   | Count |
+|----------------|-------|
+| Triangles      | 3234  |
+| Tetrahedron    | 13000 |
+| Vertices       | 5204  |
+
+<div align="center">
+  <img src="images/cube-w-multiblock-sideset-geom.png" alt="Cube with multiblock sideset geom" width="463">
+  <img src="images/cube-w-multiblock-sideset-geom.png" alt="Cube with multiblock sideset. Sideset is highlighted" width="463">
+</div>
+
