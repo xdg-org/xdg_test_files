@@ -175,22 +175,32 @@ A simple cube geometry that holds no metadata, only a tet mesh.
   <img src="images/cube-no-geom.png" alt="Cube mesh without geometry or metadata" width="600">
 </div>
 
-## quad_sphere.h5m
+## Jezebel-quads
 
 A simple sphere surface mesh composed of quadrilateral elements. This model
-matches the dimensions of the jezebel files above.
+matches the dimensions of the tet/tri jezebel files above.
 
 | Element Type   | Count |
 |----------------|-------|
-| Surface Quads  | 9600  |
-| 1D Sides       | 38400 |
-| Vertices       | 9602  |
+| Surface Quads  | 2400  |
+| Hexahedra      | 36800 |
 
-`mbgsets -g quad_sphere.h5m` reports a single parent/child relationship:
-`Volume 1 -> Surface 1`.
 
 <div align="center">
-  <img src="images/quad-sphere.png" alt="Quad sphere surface mesh" width="463">
+  <img src="images/quad-sphere.png" alt="Jezebel sphere mesh with hexes/quads" width="463">
+</div>
+
+## cyl-brick-quads.h5m/exo
+
+A 10 x 10 x 10 brick centered on (0, 0, 14.5) and a cylinder of radius 5 height 15 centered on the origin w/ rotation axis along Z. (hex mesh)
+
+| Element Type   | Count  |
+|----------------|--------|
+| Surface Quads  | 30478  |
+| Hexahedra      | 187200 |
+
+<div align="center">
+  <img src="images/cyl-brick-quads.png" alt="Multi-volume model using hexes/quads" width="463">
 </div>
 
 
