@@ -18,7 +18,7 @@ The same mesh as above but uniformly refined one time to form a small tet mesh c
 
 | Element Type      | Count |
 |-------------------|-------|
-| Surface Triangles | 16     |
+| Surface Triangles | 16    |
 | Tetrahedrons      | 8     |
 
 <div align="center">
@@ -218,4 +218,33 @@ A 10 x 10 x 10 brick centered on (0, 0, 14.5) and a cylinder of radius 5 height 
 
 <div align="center">
   <img src="images/cyl-brick-quads.png" alt="Multi-volume model using hexes/quads" width="463">
+</div>
+
+## regularized_tet_mesh.exo/h5m
+
+This is a tet mesh created with tets matching the boundary of a regular/Cartesian mesh 10 elements in each direction x, y, and z and extents from (-10, -10, -10) to (10, 10, 10) in model units. There are 12 tetrahedron per single regularized mesh element.
+
+No geometry metadata is added to this mesh. It is used purely to test element-to-element ray traversal.
+
+| Element Type  | Count |
+|---------------|-------|
+| Tetrahedron   | 12000 |
+
+<div align="center">
+  <img src="images/regularized_tet_mesh.png" alt="Regularized tetrahedral mesh" width="463">
+</div>
+
+
+## regularized_hex_mesh.exo
+
+This is a tet mesh created with tets matching the boundary of a regular/Cartesian mesh 10 elements in each direction x, y, and z and extents from (-10, -10, -10) to (10, 10, 10) in model units. There is one hexahedral element per regularized mesh element.
+
+No geometry metadata is added to this mesh. It is used purely to test element-to-element ray traversal.
+
+| Element Type  | Count |
+|---------------|-------|
+| Tetrahedron   | 1000  |
+
+<div align="center">
+  <img src="images/regularized_hex_mesh.png" alt="Regularized hexehedral mesh" width="463">
 </div>
