@@ -235,7 +235,7 @@ No geometry metadata is added to this mesh. It is used purely to test element-to
 </div>
 
 
-## regularized_hex_mesh.exo
+## regularized_hex_mesh.exo/h5m
 
 This is a tet mesh created with tets matching the boundary of a regular/Cartesian mesh 10 elements in each direction x, y, and z and extents from (-10, -10, -10) to (10, 10, 10) in model units. There is one hexahedral element per regularized mesh element.
 
