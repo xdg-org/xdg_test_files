@@ -299,3 +299,16 @@ element calls when an AMR mesh is provided to a libMesh mesh manager.
   <img src="images/amr_mesh_unrefined.png" alt="Two region mesh prior to the application of AMR" width="231">
   <img src="images/amr_mesh.png" alt="Two region mesh after the application of AMR in XDG's test suite" width="231">
 </div>
+
+## interior-volume-and-cavity-tet.exo/h5m
+
+This is a tet mesh containing both an interior volume and a cavity. It was originally created to address https://github.com/xdg-org/xdg/issues/275 and provide a set of tests for the subsequent PR https://github.com/xdg-org/xdg/pull/277 which tests `XDG::segments(volume)` along a path including both an interior volume and a void.
+
+| Element Type      | Count |
+|-------------------|-------|
+| Surface Triangles | 2384  |
+| Tetrahedrons      | 9885  |
+
+<div align="center">
+  <img src="images/interior-volume-and-cavity-tet.png" alt="Interior volume and cavity tetrahedral mesh" width="600">
+</div>
