@@ -281,10 +281,27 @@ No geometry metadata is added to this mesh. It is used purely to test mesh manag
   <img src="images/four_region_hex.png" alt="Four region hexehedral mesh" width="463">
 </div>
 
+## amr_mesh_tet.exo
 
-## amr_mesh.exo
+This is a tetrahedral mesh of a two region geometry with elements generated from an adaptive mesh refinement sequence
+from within XDG's test suite. As AMR connectivity is not stored in Exodus files, the adapted mesh cannot be
+loaded from a file (and so the unadapted mesh is included here).
 
-This is a hex mesh of a two region geometry with elements generated from an adaptive mesh refinement sequence
+No geometry metadata is added to this mesh. It is used purely to test element to element ray traversal and find
+element calls when an AMR mesh is provided to a libMesh mesh manager.
+
+| Element Type  | Count (no AMR) | Count (with AMR) |
+|---------------|----------------|------------------|
+| Tetrahedron   |       192      |       6352       |
+
+<div align="center">
+  <img src="images/amr_mesh_tet_unrefined.png" alt="Two region TET4 mesh prior to the application of AMR" width="231">
+  <img src="images/amr_mesh_tet.png" alt="Two region TET4 mesh after the application of AMR in XDG's test suite" width="231">
+</div>
+
+## amr_mesh_hex.exo
+
+This is a hexahedral mesh of a two region geometry with elements generated from an adaptive mesh refinement sequence
 from within XDG's test suite. As AMR connectivity is not stored in Exodus files, the adapted mesh cannot be
 loaded from a file (and so the unadapted mesh is included here).
 
@@ -296,6 +313,6 @@ element calls when an AMR mesh is provided to a libMesh mesh manager.
 | Hexahedron    |       32       |       1096       |
 
 <div align="center">
-  <img src="images/amr_mesh_unrefined.png" alt="Two region mesh prior to the application of AMR" width="231">
-  <img src="images/amr_mesh.png" alt="Two region mesh after the application of AMR in XDG's test suite" width="231">
+  <img src="images/amr_mesh_hex_unrefined.png" alt="Two region HEX8 mesh prior to the application of AMR" width="231">
+  <img src="images/amr_mesh_hex.png" alt="Two region HEX8 mesh after the application of AMR in XDG's test suite" width="231">
 </div>
