@@ -329,3 +329,39 @@ This is a tet mesh containing both an interior volume and a cavity. It was origi
 <div align="center">
   <img src="images/interior-volume-and-cavity-tet.png" alt="Interior volume and cavity tetrahedral mesh" width="600">
 </div>
+
+## OpenFOAM® polyMesh fixtures (polymesh-*)
+
+OPENFOAM® is a registered trade mark of OpenCFD Limited, producer and distributor
+of the OpenFOAM software via www.openfoam.com. This offering is not approved or
+endorsed by OpenCFD Limited, producer and distributor of the OpenFOAM software via
+www.openfoam.com, and owner of the OPENFOAM® and OpenCFD® trade marks.
+
+OpenFOAM `polyMesh` directories (`points`, `faces`, `owner`, `neighbour`, `boundary`,
+and `cellZones` where present) converted from Exodus meshes in this repository by
+`tools/exodus_to_polymesh.py`. Point coordinates match the source mesh: exactly
+for the first three, and in the two Jezebel meshes to within one unit in the last
+place, a single coordinate in each. So XDG's OpenFOAM backend can be cross-checked
+against MOAB over the same geometry.
+Every boundary face is in a single patch, `defaultFaces`.
+
+| Directory                  | Source                          | Format | Contents                                   |
+|----------------------------|---------------------------------|--------|--------------------------------------------|
+| `polymesh-regularized-hex` | `regularized_hex_mesh.exo`      | ASCII  | 1000 hexahedra, one volume                 |
+| `polymesh-regularized-tet` | `regularized_tet_mesh.exo`      | binary | 12000 tetrahedra, one volume               |
+| `polymesh-cube-multiblock` | `cube-w-multiblock-sideset.exo` | binary (`cellZones` ASCII) | 13000 tetrahedra in two cellZones, `Block_1` (the outer shell, 3900) and `Block_2` (the inner column, 9100) |
+| `polymesh-jezebel`         | `jezebel.exo`                   | binary | 10333 tetrahedra, one volume               |
+| `polymesh-jezebel-quads`   | `jezebel-quads.exo`             | binary | 36800 hexahedra, one volume                |
+
+The ASCII and binary formats store faces differently (`faceList` and the compressed-row
+`faceCompactList`), so both reader paths are covered. To regenerate, with meshio
+and netCDF4 installed (`pip install meshio netCDF4`) and a sourced OpenFOAM
+environment:
+
+```bash
+python3 tools/exodus_to_polymesh.py regularized_hex_mesh.exo polymesh-regularized-hex
+python3 tools/exodus_to_polymesh.py regularized_tet_mesh.exo polymesh-regularized-tet --binary
+python3 tools/exodus_to_polymesh.py cube-w-multiblock-sideset.exo polymesh-cube-multiblock --binary --zones
+python3 tools/exodus_to_polymesh.py jezebel.exo polymesh-jezebel --binary
+python3 tools/exodus_to_polymesh.py jezebel-quads.exo polymesh-jezebel-quads --binary
+```
