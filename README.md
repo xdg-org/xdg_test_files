@@ -329,3 +329,16 @@ This is a tet mesh containing both an interior volume and a cavity. It was origi
 <div align="center">
   <img src="images/interior-volume-and-cavity-tet.png" alt="Interior volume and cavity tetrahedral mesh" width="600">
 </div>
+
+
+## interior-volume-and-cavity-hex.exo/h5m
+An equivalent hex mesh including an interior volume and a cavity.
+
+| Element Type  | Count |
+|---------------|-------|
+| Surface Quads | 3264  |
+| Hexahedra     | 6696  |
+
+<div align="center">
+  <img src="images/interior-volume-and-cavity-hex.png" alt="Interior volume and cavity tetrahedral mesh" width="600">
+</div>
